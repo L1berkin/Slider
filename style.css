@@ -1,0 +1,96 @@
+/* Обнуление */
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+/* Стили */
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 25px;
+  background: linear-gradient(45deg, rgb(35, 34, 34) 0%, #000 100%);
+}
+
+.ferrari {
+  background: url('./images/ferrari.jpg');
+}
+
+.lamborghini {
+  background: url('./images/Lamborghini.jpg');
+}
+
+.camaro {
+  background: url('./images/Camaro.jpg');
+}
+
+.aston {
+  background: url('./images/Aston.jpg');
+}
+
+.tesla {
+  background: url('./images/Tesla.jpg');
+}
+
+.slide {
+  position: relative;
+  width: 80px;
+  display: flex;
+  margin: 0 20px;
+  text-align: center;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: inset 0 0 10px 0 #000;
+  transition: .5s;
+}
+
+.slide:hover {
+  transform: scale(1.005);
+  box-shadow: inset 0 0 10px 0 #000, 0 0 10px -2px rgb(255, 247, 203);
+}
+
+.slide__title {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #ccc;
+  font-family: sans-serif;
+  transition: .5s;
+  opacity: 0;
+}
+
+.active {
+  flex-grow: 1;
+}
+
+.active .slide__title {
+  opacity: 1;
+}
